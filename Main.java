@@ -3,6 +3,9 @@ import dsa.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        System.out.println(" linked List ");
+
         LinkedList ll =new LinkedList(1);
         ll.append(2);
         ll.append(3);
@@ -14,7 +17,6 @@ public class Main {
         ll.removeFirst();
         ll.printList();
         ll.reverse();
-        System.out.println();
         ll.printList();
 
 
@@ -27,6 +29,18 @@ public class Main {
         dd.Remove(1);
         dd.printList();
 
-        ////#endregion
+        //#endregion
+        
+
+         //#region stack
+        System.out.println("stack");
+         Stack ss= new Stack(2);
+
+         ss.push(1);
+         ss.printStack();
+
+
+         //#endregion
+        
     }
 }

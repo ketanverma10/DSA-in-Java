@@ -51,7 +51,10 @@ public class LinkedList{
             System.out.print(temp.value + "-->");
             temp=temp.next;
            }
+           System.out.print("null");
+           System.out.println();
         }
+        
     }
     public int getLength(){
         return length;
