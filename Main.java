@@ -41,6 +41,17 @@ public class Main {
 
 
          //#endregion
+
+
+         //#region Queue
+        System.out.println("Queue ");
+        Queue qq= new Queue(0);
+        qq.Enqueue(3);
+        qq.printQueue();
         
+
+        //#endregion
+        
+
     }
 }

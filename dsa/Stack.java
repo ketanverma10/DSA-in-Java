@@ -39,8 +39,13 @@ public class Stack {
             System.out.println();
         }
     }
-    public Node getTop(){
-        return top;
+    public void getTop(){
+        if(top==null){
+            System.out.println("there is nothing to show");
+        }
+        else{
+            System.out.println("Value is : " + top.value);
+        }
     }
     public int getHeight(){
         return height;

@@ -64,11 +64,21 @@ public class DoublyLinkedList{
         return length;
 
     }
-    public Node getHead(){
-        return head;
-    }    
-    public Node getTail(){
-        return tail;
+    public void getHead(){
+        if(head==null){
+            System.out.println("there is nothing to show");
+        }
+        else{
+            System.out.println("Value is : " + head.value);
+        }
+    }
+    public void getTail(){
+        if(head==null){
+            System.out.println("there is nothing to show");
+        }
+        else{
+            System.out.println("Value is : " + tail.value);
+        }
     }
     public Node removeLast(){
         if(isNull()) return null;
