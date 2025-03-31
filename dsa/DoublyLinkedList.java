@@ -1,6 +1,5 @@
 package dsa;
 
-
 public class DoublyLinkedList{
     private int length;
     private Node head;
@@ -115,6 +114,63 @@ public class DoublyLinkedList{
 
     public Node get (int index){
         if (index < 0 || index >= length) return null;
+        Node temp=head;
+        if(index <length/2){
+            for(int i=0;i<index;i++){
+                temp=temp.next;
+            }
+        }
+        else{
+            temp=tail;
+            for(int i=length-1;i>index;i--){
+                temp=temp.prev;
+            }
+        }
+        return temp;
+    }
+    public boolean set(int index,int value){
+        Node temp= get(index);
+        if(temp!=null){
+            temp.value=value;
+            return true;
+        }
+        return false;
+    }
+    public boolean insert(int index,int value){
+        if (index < 0 || index >= length) return false;
+        if(index==0){
+            prepend(value);
+            return true;
+        }
+
+        if(index==length){
+            append(value);
+            return true;
+        }
+        Node newnNode = new Node(value);
+        Node before=get(index-1);
+        Node after=before.next;
+        before.next=newnNode;
+        after.prev=newnNode;
+        newnNode.prev=before;
+        newnNode.next=after;
+        length++;
+        return true;
+
+    }
+    public Node Remove(int index){
+        if(index<0||index>length) return null;
+        if(index==0) {
+           return  removeFirst();
+        }
+        if(index==length-1) return removeLast();
+        Node temp=get(index);
+        temp.prev.next=temp.next;
+        temp.next.prev=temp.prev;
+        temp.prev=null;
+        temp.next=null;
+        length--;
+        return null;
 
     }
     

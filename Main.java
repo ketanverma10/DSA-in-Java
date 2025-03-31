@@ -1,4 +1,5 @@
-import dsa.LinkedList;
+import dsa.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -15,5 +16,17 @@ public class Main {
         ll.reverse();
         System.out.println();
         ll.printList();
+
+
+        //#region doublylink list 
+        System.out.println("Doubly link List ");
+        DoublyLinkedList dd= new DoublyLinkedList(0);
+        dd.append(2);
+        dd.prepend(3);
+        dd.printList();
+        dd.Remove(1);
+        dd.printList();
+
+        ////#endregion
     }
 }
