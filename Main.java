@@ -52,6 +52,15 @@ public class Main {
 
         //#endregion
         
+         //#region Queue
+         System.out.println("Tree");
+         Tree t= new Tree();
+         t.Insert(4);
+         t.Insert(5);
+         t.Insert(3);
+         System.out.println(t.Contains(4));
+         
+         //#endregion
 
     }
 }
